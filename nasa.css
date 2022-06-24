@@ -18,3 +18,29 @@ h1 {
   text-align: center;
   margin: 2%;
 }
+
+input {
+  display: block;
+  margin: 1% auto;
+  padding: 0.5%;
+}
+
+button {
+  padding: 1% 2%;
+  margin: 1% auto;
+  display: block;
+  background-color: var(--tertiary);
+  color: var(--secondary);
+  border-radius: 0.4em;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  margin: 1% auto;
+  height: 10%;
+  width: 10%;
+}
