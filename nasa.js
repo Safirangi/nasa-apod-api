@@ -1,7 +1,9 @@
 document.querySelector("button").addEventListener("click", getFetch);
 
 function getFetch() {
-  const choice = document.querySelector("input").value.toLowerCase();
+  const choice = document.querySelector("input");
+  console.log(choice);
+  
   const url = `https://api.nasa.gov/planetary/apod?api_key=YAaedpPBm7wtIMOveorx9dMioDxj4jQRV7pqzggQ`;
 
   fetch(url)
