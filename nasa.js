@@ -18,8 +18,15 @@ function getFetch() {
       document.querySelector("h3").innerText = data.title;
     /*'explanation' property of the object is put in the p tag */
       document.querySelector("p").innerText = data.explanation;
-    /*'hdurl' property of the object is put in the img tag -> src attribute */
-      document.querySelector("img").src = data.hdurl;
+    
+    if (data.media_type === "image") {
+        /*'hdurl' property of the object is put in the img tag -> src attribute */
+        document.querySelector("img").src = data.hdurl;
+      } else if (data.media_type === "video") {
+        /*'url' property of the object is put in the iframe tag -> src attribute */
+        document.querySelector("iframe").src = data.url;
+      }
+    
     })
     .catch((err) => {
     /*Error, if generated, is console logged */
