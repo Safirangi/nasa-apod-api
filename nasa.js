@@ -1,13 +1,13 @@
 /*Adds an Event Listener to the Button to listen to a 'click', which executes getsFetch() 
 function upon registering a click*/
-document.querySelector("button").addEventListener("click", getFetch);
+document.querySelector("button").addEventListener("click", getFetch());
 
 function getFetch() {
   const choice = document.querySelector("input").value;
   console.log(choice);
   
   /*URL for the Server to send requests*/
-  const url = `https://api.nasa.gov/planetary/apod?api_key=YAaedpPBm7wtIMOveorx9dMioDxj4jQRV7pqzggQ`;
+  const url = `https://api.nasa.gov/planetary/apod?api_key=YAaedpPBm7wtIMOveorx9dMioDxj4jQRV7pqzggQ&date=${choice}`;
 
   fetch(url)
     .then((res) => res.json())
